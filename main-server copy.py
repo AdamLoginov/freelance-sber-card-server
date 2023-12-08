@@ -119,18 +119,16 @@ if __name__ == "__main__":
 
             go_form_1(wait=wait, driver=driver, data=data)
             post_host('wait', 'Form №1 Successfully')
-            # click_button(driver=driver,
-            #                 path='//button[@class="do-kit-button do-kit-button_type_primary do-kit-button_size_md do-home__step-button"]')
-            # post_host('wait', 'Form №1 press button Successfully')
-            # go_form_2(wait=wait, driver=driver, data=data)
-            # post_host('wait', 'Form №2 Successfully debag-url')
+            click_button(driver=driver,
+                            path='//button[@class="do-kit-button do-kit-button_type_primary do-kit-button_size_md do-home__step-button"]')
+            post_host('wait', 'Form №1 press button Successfully')
+            go_form_2(wait=wait, driver=driver, data=data)
+            post_host('wait', 'Form №2 Successfully debag-url')
             
-            # wait_map.until(EC.presence_of_all_elements_located((By.XPATH, '//button[@class="do-kit-button do-kit-button_type_primary do-kit-button_size_md do-office__step-button"]')))
+            wait_map.until(EC.presence_of_all_elements_located((By.XPATH, '//button[@class="do-kit-button do-kit-button_type_primary do-kit-button_size_md do-office__step-button"]')))
 
-            # find_button(driver=driver,
-            #     path='//button[@class="do-kit-button do-kit-button_type_primary do-kit-button_size_md do-office__step-button"]')
             find_button(driver=driver,
-                path='//button[@class="do-kit-button do-kit-button_type_primary do-kit-button_size_md do-home__step-button"]')
+                path='//button[@class="do-kit-button do-kit-button_type_primary do-kit-button_size_md do-office__step-button"]')
             post_host('debag-url', 'Host ready to press button')
 
             commandHost = None
