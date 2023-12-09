@@ -112,7 +112,7 @@ if __name__ == "__main__":
         
         with webdriver.Chrome(options=get_ChromeOptions()) as driver:
             wait = WebDriverWait(driver, 120)
-            wait_map = WebDriverWait(driver, 600)
+            wait_map = WebDriverWait(driver, 1200)
 
             driver.get(URL)
             post_host('wait', 'Get sber Successfully')
@@ -123,7 +123,7 @@ if __name__ == "__main__":
             #                 path='//button[@class="do-kit-button do-kit-button_type_primary do-kit-button_size_md do-home__step-button"]')
             # post_host('wait', 'Form №1 press button Successfully')
             # go_form_2(wait=wait, driver=driver, data=data)
-            # post_host('wait', 'Form №2 Successfully debag-url')
+            # post_host('debag-url', 'Form №2 Successfully debag-url')
             
             # wait_map.until(EC.presence_of_all_elements_located((By.XPATH, '//button[@class="do-kit-button do-kit-button_type_primary do-kit-button_size_md do-office__step-button"]')))
 
@@ -131,7 +131,8 @@ if __name__ == "__main__":
             #     path='//button[@class="do-kit-button do-kit-button_type_primary do-kit-button_size_md do-office__step-button"]')
             find_button(driver=driver,
                 path='//button[@class="do-kit-button do-kit-button_type_primary do-kit-button_size_md do-home__step-button"]')
-            post_host('debag-url', 'Host ready to press button')
+
+            post_host('ready', 'Host ready to press button')
 
             commandHost = None
             while commandHost != 'press':
